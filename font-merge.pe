@@ -1,18 +1,21 @@
+#!/bin/fontforge
 # Pre-operation for some non-standard Chinese font file
-Open("CJK.ttf")
+Open($1)
 SelectAll()
 ScaleToEm(1024)
 Generate("temp.ttf", "", 0x14)
 Close()
  
 # Open English font and merge to the Chinese font
-Open("English.ttf")
+Open($2)
 SelectAll()
 ScaleToEm(1024)
  
 MergeFonts("temp.ttf")
-SetFontNames("MergedFontName", "MergedFontName", "MergedFontName", "Regular", "")
-Generate("MergedFontName.ttf", "", 0x14)
+SetFontNames($3, $3, $3, "Regular", "")
+Generate($3 + ".ttf", "", 0x14)
 Close()
 
-# Run $ fontforge -script font-merge.pe
+# Run $ ./font-merge.pe CJK.ttf English.ttf MergeName
+# Or
+# Run $ fontforge -script font-merge.pe CJK.ttf English.ttf MergeName
