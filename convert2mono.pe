@@ -1,0 +1,10 @@
+#!/bin/fontforge
+Open($1)
+SetFontNames($2, $2, $2, "Regular", "")
+SetPanose(3, 9) # monospaced
+Generate($2 + ".ttf")
+Close()
+
+# Run $ ./convert.pe font.ttf fontname
+# Or
+# Run $ fontforge -script convert.pe font.ttf fontname

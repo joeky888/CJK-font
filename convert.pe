@@ -1,8 +1,0 @@
-#!/bin/fontforge
-Open($1)
-Generate($2)
-Close()
-
-# Run $ ./convert.pe font.ttc font.ttf
-# Or
-# Run $ fontforge -script convert.pe font.ttc font.ttf
