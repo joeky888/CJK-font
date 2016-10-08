@@ -6,6 +6,12 @@ Original
 * wqy-microhei.ttc
 * wqy-zenhei.ttc
 
+Monosapced
+=====
+* DroidMono.ttf = Monosapced DroidSansFallback
+* DroidMonoFull.ttf = Monosapced DroidSansFallbackFull
+* WqyMono.ttf = Monosapced wqy-microhei
+
 Merged by fontforge
 =====
 * UbuntuDroid.ttf = Ubuntu + DroidSansFallback
